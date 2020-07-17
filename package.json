@@ -1,0 +1,31 @@
+{
+  "name": "demo-checkout-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node ./dist/server.js\" ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set NODE_ENV=production&& tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.20",
+    "nodemon": "^2.0.4",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "nodemailer": "^6.4.10"
+  }
+}
