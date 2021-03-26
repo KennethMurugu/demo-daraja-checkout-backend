@@ -6,7 +6,10 @@ import { getOAuthToken, lnm, lnmcallback } from './api'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const serverIP: any = process.env.SERVER_IP || '127.0.0.1'
+const serverIP: any = process.env.SERVER_IP
+if (!serverIP) {
+  throw new Error(`Invalid value SERVER_IP: ${serverIP}`)
+}
 
 let app = express()
 app.use(bodyParser.json())
