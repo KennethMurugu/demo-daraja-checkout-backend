@@ -24,12 +24,12 @@ app.use(function (req, response, next) {
   next()
 })
 app
-  .get('/demo-cart-checkout/test', function (req, res) {
+  .get('/test', function (req, res) {
     res.send('MAIN TEST URL')
   })
-  .get('/demo-cart-checkout/oauthtoken', getOAuthToken)
-  .post('/demo-cart-checkout/lnm', lnm)
-  .get('/demo-cart-checkout/lnmcallback', lnmcallback)
+  .get('/oauthtoken', getOAuthToken)
+  .post('/lnm', lnm)
+  .get('/lnmcallback', lnmcallback)
 
 app.listen(8081, serverIP, () => {
   console.info(`Backend Server listening on ${serverIP}:8081`)
